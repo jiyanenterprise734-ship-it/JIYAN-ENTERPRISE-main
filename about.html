@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | JIYAN ENTERPRISE</title>
+<meta name="description" content="Learn about JIYAN ENTERPRISE – a modern technology company delivering reliable Android app development, UI/UX design, and digital solutions based in Surat, India."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#7f13ec",
+          "secondary": "#06b6d4",
+          "background-light": "#f7f6f8",
+          "background-dark": "#191022",
+        },
+        fontFamily: { "display": ["Inter", "sans-serif"] },
+        borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+      },
+    },
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  .fade-in-up { animation: fadeInUp 0.7s ease forwards; }
+  .card-hover { transition: all 0.3s ease; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(127,19,236,0.10); }
+  .nav-link::after { content:''; position:absolute; left:0; bottom:-4px; width:0; height:2px; background:#7f13ec; transition: width 0.3s; }
+  .nav-link:hover::after { width: 100%; }
+</style>
+</head>
+<body class="bg-background-light text-slate-900 font-display antialiased">
+
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-white/80 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="img/logo.png" alt="JIYAN ENTERPRISE Logo" class="h-10 w-10 object-contain rounded-lg"/>
+        <span class="text-xl font-black tracking-tight text-slate-900 uppercase">JIYAN ENTERPRISE</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a class="relative text-sm font-semibold text-slate-700 hover:text-primary transition-colors nav-link" href="index.html">Home</a>
+        <a class="relative text-sm font-semibold text-primary nav-link" href="about.html">About</a>
+        <a class="relative text-sm font-semibold text-slate-700 hover:text-primary transition-colors nav-link" href="services.html">Services</a>
+        <a class="relative text-sm font-semibold text-slate-700 hover:text-primary transition-colors nav-link" href="contact.html">Contact</a>
+        <a class="relative text-sm font-semibold text-slate-700 hover:text-primary transition-colors nav-link" href="privacy-policy.html">Privacy Policy</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="rounded-xl bg-primary px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary/90 hover:scale-105 transition-all">Get Started</a>
+        <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-700"><span class="material-symbols-outlined">menu</span></button>
+      </div>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 py-4 space-y-3">
+    <a class="block text-sm font-semibold text-primary py-2" href="index.html">Home</a>
+    <a class="block text-sm font-semibold text-slate-700 py-2" href="about.html">About</a>
+    <a class="block text-sm font-semibold text-slate-700 py-2" href="services.html">Services</a>
+    <a class="block text-sm font-semibold text-slate-700 py-2" href="contact.html">Contact</a>
+    <a class="block text-sm font-semibold text-slate-700 py-2" href="privacy-policy.html">Privacy Policy</a>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="relative pt-16 pb-20 lg:pt-24 overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-primary/5 to-transparent"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="fade-in-up">
+          <div class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1.5 text-sm font-semibold text-primary mb-6">
+            <span class="material-symbols-outlined text-sm">groups</span>
+            About JIYAN ENTERPRISE
+          </div>
+          <h1 class="text-4xl font-black leading-tight tracking-tight text-slate-900 sm:text-5xl mb-6">
+            Who We Are &amp; <span class="text-primary">What Drives Us</span>
+          </h1>
+          <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+            JIYAN ENTERPRISE is a modern technology company dedicated to providing reliable and high-quality digital solutions. Our team consists of skilled professionals passionate about innovation, accuracy, and delivering excellence in mobile application and software development.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="services.html" class="rounded-xl bg-primary px-8 py-4 text-base font-bold text-white shadow-xl shadow-primary/20 hover:scale-105 transition-all">Explore Services</a>
+            <a href="contact.html" class="rounded-xl bg-white border border-slate-200 px-8 py-4 text-base font-bold text-slate-900 hover:bg-slate-50 transition-all">Contact Team</a>
+          </div>
+        </div>
+        <div class="relative flex justify-center">
+          <div class="aspect-square w-full max-w-sm rounded-3xl bg-gradient-to-tr from-primary/15 to-secondary/15 flex items-center justify-center border border-primary/10 shadow-2xl p-8">
+            <img src="img/logo.png" alt="JIYAN ENTERPRISE" class="w-full object-contain drop-shadow-xl"/>
+          </div>
+          <div class="absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-xl border border-primary/10 flex items-center gap-3">
+            <div class="p-3 bg-green-100 rounded-lg"><span class="material-symbols-outlined text-green-500">done_all</span></div>
+            <div>
+              <p class="text-2xl font-bold text-slate-900">90+</p>
+              <p class="text-xs text-slate-500 uppercase tracking-wider font-medium">Projects Delivered</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Are / What We Do -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="card-hover bg-background-light p-10 rounded-3xl border border-primary/10">
+          <div class="h-14 w-14 rounded-2xl bg-primary text-white flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-2xl">info</span>
+          </div>
+          <h2 class="text-2xl font-bold mb-4">Who We Are</h2>
+          <p class="text-slate-600 leading-relaxed">
+            We are a modern technology company dedicated to providing reliable, high-quality digital solutions. Our team combines thoughtful planning, modern technologies, and clean design practices to build digital products that are efficient, scalable, and built to solve real business challenges.
+          </p>
+        </div>
+        <div class="card-hover bg-background-light p-10 rounded-3xl border border-secondary/10">
+          <div class="h-14 w-14 rounded-2xl bg-secondary text-white flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-2xl">rocket_launch</span>
+          </div>
+          <h2 class="text-2xl font-bold mb-4">What We Do</h2>
+          <p class="text-slate-600 leading-relaxed">
+            We develop secure, scalable, and high-performing mobile applications and digital systems designed for today's business environment. From initial concept to deployment, we manage the entire project lifecycle while maintaining high standards of performance and usability.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="py-24 bg-background-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-primary font-bold tracking-widest uppercase text-xs">Our Purpose</span>
+        <h2 class="text-3xl font-black mt-3 mb-4 text-slate-900">Mission &amp; Vision</h2>
+        <div class="mt-2 w-16 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="card-hover bg-white p-10 rounded-3xl border border-primary/10 shadow-sm">
+          <div class="h-14 w-14 rounded-2xl bg-primary text-white flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-3xl">flag</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+          <p class="text-slate-600 leading-relaxed text-lg">
+            Our mission is to help businesses grow through innovative technology solutions that improve operational efficiency, strengthen user engagement, and support long-term digital success. We aim to deliver dependable and well-designed products that balance performance, usability, and security.
+          </p>
+        </div>
+        <div class="card-hover bg-white p-10 rounded-3xl border border-secondary/10 shadow-sm">
+          <div class="h-14 w-14 rounded-2xl bg-secondary text-white flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-3xl">visibility</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
+          <p class="text-slate-600 leading-relaxed text-lg">
+            Our vision is to establish JIYAN ENTERPRISE as a trusted name in the digital solutions industry by consistently delivering innovative, dependable, and high-quality technology services. We strive to adapt to evolving technologies and build solutions that contribute to the future of digital transformation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Android Experience -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="w-full lg:w-1/2">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="space-y-4 pt-10">
+              <div class="p-1 rounded-2xl bg-gradient-to-br from-primary to-secondary">
+                <div class="bg-white p-6 rounded-2xl h-full">
+                  <span class="material-symbols-outlined text-primary mb-3 block">android</span>
+                  <h4 class="font-bold">Native Apps</h4>
+                  <p class="text-sm text-slate-500 mt-1">Kotlin & Java experts for high-performance apps.</p>
+                </div>
+              </div>
+              <div class="bg-background-light p-6 rounded-2xl">
+                <span class="material-symbols-outlined text-secondary mb-3 block">storage</span>
+                <h4 class="font-bold">Data Integration</h4>
+                <p class="text-sm text-slate-500 mt-1">Seamless backend sync and real-time data handling.</p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div class="bg-background-light p-6 rounded-2xl">
+                <span class="material-symbols-outlined text-primary mb-3 block">speed</span>
+                <h4 class="font-bold">Optimization</h4>
+                <p class="text-sm text-slate-500 mt-1">Fast load times and minimal battery consumption.</p>
+              </div>
+              <div class="p-1 rounded-2xl bg-gradient-to-br from-secondary to-primary">
+                <div class="bg-white p-6 rounded-2xl h-full">
+                  <span class="material-symbols-outlined text-secondary mb-3 block">security</span>
+                  <h4 class="font-bold">Secure Core</h4>
+                  <p class="text-sm text-slate-500 mt-1">Enterprise-grade data protection and user privacy.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2">
+          <span class="text-primary font-bold uppercase text-xs tracking-widest">Android Expertise</span>
+          <h2 class="text-3xl font-black mt-4 mb-6 text-slate-900">Our Experience in Android Development</h2>
+          <p class="text-slate-600 text-lg mb-8 leading-relaxed">
+            At JIYAN ENTERPRISE, we have solid experience in developing modern Android applications that are intuitive, efficient, and performance-focused. Our development approach emphasizes structured architecture, optimized performance, and seamless user interaction.
+          </p>
+          <p class="text-slate-600 mb-8 leading-relaxed">
+            From crafting user-friendly interfaces to ensuring proper compliance with platform standards and smooth application deployment, our expertise allows us to convert innovative ideas into reliable, scalable, and production-ready mobile applications.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary">check_circle</span>
+              <span class="text-slate-700">Custom UI/UX designed specifically for mobile workflows</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary">check_circle</span>
+              <span class="text-slate-700">Full lifecycle management from concept to Play Store</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary">check_circle</span>
+              <span class="text-slate-700">Scalable architecture built for growth</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="py-20 bg-primary overflow-hidden relative">
+    <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-48 h-48 bg-secondary/20 rounded-full -ml-24 -mb-24 pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center text-white mb-14">
+        <h2 class="text-3xl font-bold mb-4">Our Primary Services</h2>
+        <p class="text-white/80 max-w-xl mx-auto">Everything your business needs to build a strong, effective digital presence.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white/10 backdrop-blur-sm border border-white/10 p-7 rounded-2xl hover:bg-white/15 transition-colors">
+          <div class="text-2xl mb-3">📱</div>
+          <h4 class="text-white font-bold text-lg mb-2">Android Development</h4>
+          <p class="text-white/70 text-sm">High-performance Android apps tailored to business and user needs.</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm border border-white/10 p-7 rounded-2xl hover:bg-white/15 transition-colors">
+          <div class="text-2xl mb-3">🌐</div>
+          <h4 class="text-white font-bold text-lg mb-2">Website Development</h4>
+          <p class="text-white/70 text-sm">Responsive, professional websites with speed, security, and modern design.</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm border border-white/10 p-7 rounded-2xl hover:bg-white/15 transition-colors">
+          <div class="text-2xl mb-3">🎨</div>
+          <h4 class="text-white font-bold text-lg mb-2">UI/UX Design</h4>
+          <p class="text-white/70 text-sm">Clean, engaging, and user-friendly interfaces focused on simplicity.</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm border border-white/10 p-7 rounded-2xl hover:bg-white/15 transition-colors">
+          <div class="text-2xl mb-3">🚀</div>
+          <h4 class="text-white font-bold text-lg mb-2">App Publishing</h4>
+          <p class="text-white/70 text-sm">Play Console setup, submission guidance, and compliance support.</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm border border-white/10 p-7 rounded-2xl hover:bg-white/15 transition-colors">
+          <div class="text-2xl mb-3">🛠</div>
+          <h4 class="text-white font-bold text-lg mb-2">Maintenance &amp; Support</h4>
+          <p class="text-white/70 text-sm">Regular updates, bug fixes, and performance improvements.</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm border border-white/10 p-7 rounded-2xl hover:bg-white/15 transition-colors flex flex-col justify-center text-center">
+          <p class="text-white font-bold mb-4">Ready to start?</p>
+          <a href="contact.html" class="inline-block bg-white text-primary font-bold px-6 py-2.5 rounded-xl text-sm hover:bg-slate-100 transition-colors">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <p class="text-4xl font-black text-primary mb-2">90+</p>
+          <p class="text-slate-500 font-medium">Projects Completed</p>
+        </div>
+        <div>
+          <p class="text-4xl font-black text-secondary mb-2">100%</p>
+          <p class="text-slate-500 font-medium">Client Satisfaction</p>
+        </div>
+        <div>
+          <p class="text-4xl font-black text-primary mb-2">5+</p>
+          <p class="text-slate-500 font-medium">Services Offered</p>
+        </div>
+        <div>
+          <p class="text-4xl font-black text-secondary mb-2">24/7</p>
+          <p class="text-slate-500 font-medium">Support Available</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-300 py-14">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      <div>
+        <div class="flex items-center gap-3 mb-5">
+          <img src="img/logo.png" alt="JIYAN ENTERPRISE" class="h-9 w-9 object-contain rounded-lg"/>
+          <span class="text-lg font-black tracking-tight text-white uppercase">JIYAN ENTERPRISE</span>
+        </div>
+        <p class="text-sm leading-relaxed text-slate-400">Designing Digital Experiences That Matter. High-quality mobile apps and digital products for modern businesses.</p>
+        <div class="mt-5 space-y-2 text-sm text-slate-400">
+          <p class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">mail</span> jiyanenterprise734@gmail.com</p>
+          <p class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">call</span> +91 8799158303</p>
+          <p class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-base">location_on</span> GFL, 58, Krishna Row House, Pasodara, Kamrej, Surat – 395006, India</p>
+        </div>
+      </div>
+      <div>
+        <h5 class="text-white font-bold mb-6">Quick Links</h5>
+        <ul class="space-y-3 text-sm">
+          <li><a class="hover:text-primary transition-colors" href="index.html">Home</a></li>
+          <li><a class="hover:text-primary transition-colors" href="about.html">About Us</a></li>
+          <li><a class="hover:text-primary transition-colors" href="services.html">Services</a></li>
+          <li><a class="hover:text-primary transition-colors" href="contact.html">Contact Us</a></li>
+          <li><a class="hover:text-primary transition-colors" href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-white font-bold mb-6">Our Services</h5>
+        <ul class="space-y-3 text-sm">
+          <li><a class="hover:text-primary transition-colors" href="services.html">Android App Development</a></li>
+          <li><a class="hover:text-primary transition-colors" href="services.html">Website Development</a></li>
+          <li><a class="hover:text-primary transition-colors" href="services.html">UI/UX Design</a></li>
+          <li><a class="hover:text-primary transition-colors" href="services.html">App Publishing & Play Console</a></li>
+          <li><a class="hover:text-primary transition-colors" href="services.html">Maintenance & Support</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-800 pt-8 text-center text-xs text-slate-500">
+      <p>© 2025 JIYAN ENTERPRISE. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp -->
+<a class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl hover:scale-110 transition-transform active:scale-95 group" href="https://wa.me/918799158303" target="_blank" aria-label="Chat on WhatsApp">
+  <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  <span class="absolute right-full mr-4 whitespace-nowrap rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Chat on WhatsApp</span>
+</a>
+<script>
+  const btn = document.getElementById('mobileMenuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+</script>
+</body>
+</html>

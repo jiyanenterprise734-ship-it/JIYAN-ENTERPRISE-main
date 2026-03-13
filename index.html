@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JIYAN ENTERPRISE | Designing Digital Experiences That Matter</title>
+<meta name="description" content="JIYAN ENTERPRISE – A forward-thinking technology company delivering high-quality mobile applications and digital solutions. Android development, UI/UX design, and app publishing."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#7f13ec",
+          "secondary": "#06b6d4",
+          "background-light": "#f7f6f8",
+          "background-dark": "#191022",
+        },
+        fontFamily: { "display": ["Inter", "sans-serif"] },
+        borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+      },
+    },
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes float { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+  .fade-in-up { animation: fadeInUp 0.7s ease forwards; }
+  .float-anim { animation: float 4s ease-in-out infinite; }
+  .stat-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .stat-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(127,19,236,0.15); }
+  .service-card { transition: all 0.3s ease; }
+  .service-card:hover { transform: translateY(-6px); }
+  .nav-link { position: relative; }
+  .nav-link::after { content:''; position:absolute; left:0; bottom:-4px; width:0; height:2px; background:#7f13ec; transition: width 0.3s ease; }
+  .nav-link:hover::after { width: 100%; }
+  .hero-gradient { background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(127,19,236,0.15) 0%, transparent 60%); }
+  .counter { display: inline-block; }
+</style>
+</head>
+<body class="bg-background-light text-slate-900 font-display antialiased">
+
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-white/80 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="img/logo.png" alt="JIYAN ENTERPRISE Logo" class="h-10 w-10 object-contain rounded-lg"/>
+        <span class="text-xl font-black tracking-tight text-slate-900 uppercase">JIYAN ENTERPRISE</span>
+      </a>
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a class="nav-link text-sm font-semibold text-primary" href="index.html">Home</a>
+        <a class="nav-link text-sm font-semibold text-slate-700 hover:text-primary transition-colors" href="about.html">About</a>
+        <a class="nav-link text-sm font-semibold text-slate-700 hover:text-primary transition-colors" href="services.html">Services</a>
+        <a class="nav-link text-sm font-semibold text-slate-700 hover:text-primary transition-colors" href="contact.html">Contact</a>
+        <a class="nav-link text-sm font-semibold text-slate-700 hover:text-primary transition-colors" href="privacy-policy.html">Privacy Policy</a>
+      </nav>
+      <!-- CTA -->
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="rounded-xl bg-primary px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary/90 hover:scale-105 transition-all">
+          Get Started
+        </a>
+        <!-- Mobile menu btn -->
+        <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-700">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile Nav -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 py-4 space-y-3">
+    <a class="block text-sm font-semibold text-primary py-2" href="index.html">Home</a>
+    <a class="block text-sm font-semibold text-slate-700 py-2" href="about.html">About</a>
+    <a class="block text-sm font-semibold text-slate-700 py-2" href="services.html">Services</a>
+    <a class="block text-sm font-semibold text-slate-700 py-2" href="contact.html">Contact</a>
+    <a class="block text-sm font-semibold text-slate-700 py-2" href="privacy-policy.html">Privacy Policy</a>
+  </div>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden pt-20 pb-24 lg:pt-32 lg:pb-36 hero-gradient">
+    <!-- Background dots -->
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(#e2d9f3_1px,transparent_1px)] [background-size:24px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_60%,transparent_100%)]"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <!-- Left -->
+        <div class="fade-in-up">
+          <div class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary mb-6">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            </span>
+            Technology Company · Surat, India
+          </div>
+          <h1 class="text-4xl font-black leading-tight tracking-tight text-slate-900 sm:text-6xl mb-6">
+            Transforming Ideas into <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Smart Digital Solutions</span>
+          </h1>
+          <p class="text-lg text-slate-600 mb-10 max-w-xl leading-relaxed">
+            JIYAN ENTERPRISE delivers high-quality mobile applications and digital solutions — integrating smart strategy, advanced technology, and elegant design to help your business grow.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="services.html" class="rounded-xl bg-primary px-8 py-4 text-base font-bold text-white shadow-xl shadow-primary/25 hover:scale-105 transition-all">
+              Explore Services
+            </a>
+            <a href="contact.html" class="rounded-xl bg-white border border-slate-200 px-8 py-4 text-base font-bold text-slate-900 hover:bg-slate-50 hover:border-primary/30 transition-all">
+              Contact Us
+            </a>
+          </div>
+          <!-- Stats row -->
+          <div class="flex flex-wrap gap-6 mt-12">
+            <div class="stat-card bg-white rounded-2xl px-6 py-4 border border-slate-100 shadow-sm">
+              <p class="text-3xl font-black text-primary">90+</p>
+              <p class="text-xs text-slate-500 font-medium mt-1">Projects Completed</p>
+            </div>
+            <div class="stat-card bg-white rounded-2xl px-6 py-4 border border-slate-100 shadow-sm">
+              <p class="text-3xl font-black text-secondary">100%</p>
+              <p class="text-xs text-slate-500 font-medium mt-1">Client Satisfaction</p>
+            </div>
+            <div class="stat-card bg-white rounded-2xl px-6 py-4 border border-slate-100 shadow-sm">
+              <p class="text-3xl font-black text-primary">5★</p>
+              <p class="text-xs text-slate-500 font-medium mt-1">Quality Delivery</p>
+            </div>
+          </div>
+        </div>
+        <!-- Right: Logo illustration -->
+        <div class="relative flex justify-center float-anim">
+          <div class="relative w-full max-w-md aspect-square rounded-3xl bg-gradient-to-tr from-primary/10 to-secondary/10 flex items-center justify-center border border-primary/10 shadow-2xl">
+            <img src="img/logo.png" alt="JIYAN ENTERPRISE" class="w-3/4 h-3/4 object-contain drop-shadow-xl"/>
+            <!-- Floating badge -->
+            <div class="absolute -bottom-5 -left-5 bg-white rounded-2xl px-5 py-4 shadow-xl border border-primary/10 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center">
+                <span class="material-symbols-outlined text-green-500">check_circle</span>
+              </div>
+              <div>
+                <p class="text-sm font-bold text-slate-900">100% Satisfied</p>
+                <p class="text-xs text-slate-500">Clients Worldwide</p>
+              </div>
+            </div>
+            <div class="absolute -top-5 -right-5 bg-primary rounded-2xl px-5 py-4 shadow-xl flex items-center gap-3">
+              <span class="material-symbols-outlined text-white">android</span>
+              <div>
+                <p class="text-sm font-bold text-white">Android</p>
+                <p class="text-xs text-white/70">Experts</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-primary font-bold tracking-widest uppercase text-xs">What We Do</span>
+        <h2 class="text-3xl font-black mt-3 mb-4 text-slate-900">Our Core Services</h2>
+        <p class="text-slate-500 max-w-xl mx-auto">From concept to deployment, we manage the full lifecycle of your digital product.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="service-card group p-8 rounded-2xl bg-background-light border border-slate-100 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
+          <div class="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-3xl">android</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Android Development</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Custom, high-performance Android apps built for business — intuitive, scalable, and production-ready.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="service-card group p-8 rounded-2xl bg-background-light border border-slate-100 hover:border-secondary/30 hover:shadow-xl hover:shadow-secondary/5">
+          <div class="w-14 h-14 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-3xl">language</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Website Development</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Responsive, professional websites that represent your business effectively while maintaining speed and modern design.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="service-card group p-8 rounded-2xl bg-background-light border border-slate-100 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
+          <div class="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-3xl">palette</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">UI/UX Design</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Clean, engaging, user-friendly interfaces that prioritize simplicity, usability, and visual appeal.</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="service-card group p-8 rounded-2xl bg-background-light border border-slate-100 hover:border-secondary/30 hover:shadow-xl hover:shadow-secondary/5">
+          <div class="w-14 h-14 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-3xl">cloud_upload</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">App Publishing</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Play Console setup, app submission guidance, and compliance with platform guidelines for smooth deployment.</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="service-card group p-8 rounded-2xl bg-background-light border border-slate-100 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
+          <div class="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-3xl">support_agent</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Maintenance & Support</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Regular updates, bug fixes, and performance improvements to keep your apps running smoothly.</p>
+        </div>
+        <!-- CTA Card -->
+        <div class="service-card relative overflow-hidden p-8 rounded-2xl bg-gradient-to-br from-primary to-secondary flex flex-col justify-center text-white">
+          <div class="relative z-10">
+            <h3 class="text-xl font-black mb-3 leading-tight">Have a project idea?</h3>
+            <p class="mb-6 opacity-90 text-sm">Let's build something extraordinary together.</p>
+            <a href="contact.html" class="inline-block bg-white text-primary px-6 py-2.5 rounded-xl font-bold text-sm hover:bg-slate-50 transition-colors">Talk to Us</a>
+          </div>
+          <div class="absolute -right-8 -bottom-8 opacity-20">
+            <span class="material-symbols-outlined text-[160px]">rocket_launch</span>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <a href="services.html" class="inline-flex items-center gap-2 font-bold text-primary hover:gap-4 transition-all">
+          View All Services <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-24 bg-background-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-primary font-bold tracking-widest uppercase text-xs">Why JIYAN</span>
+        <h2 class="text-3xl font-black mt-3 mb-4 text-slate-900">Why Businesses Choose Us</h2>
+        <p class="text-slate-500 max-w-xl mx-auto">We combine technical expertise with business understanding to deliver results that truly matter.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl border border-slate-100 hover:border-primary/20 hover:shadow-lg transition-all text-center group">
+          <div class="text-4xl mb-4">🚀</div>
+          <h4 class="text-xl font-bold mb-3">Fast Delivery</h4>
+          <p class="text-slate-500 text-sm leading-relaxed">Rapid prototyping and agile development cycles ensure your product reaches the market quickly without sacrificing quality.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl border border-slate-100 hover:border-primary/20 hover:shadow-lg transition-all text-center group">
+          <div class="text-4xl mb-4">💎</div>
+          <h4 class="text-xl font-bold mb-3">Premium Quality</h4>
+          <p class="text-slate-500 text-sm leading-relaxed">Rigorous testing, clean architecture, and high coding standards are at the heart of everything we build.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl border border-slate-100 hover:border-primary/20 hover:shadow-lg transition-all text-center group">
+          <div class="text-4xl mb-4">🤝</div>
+          <h4 class="text-xl font-bold mb-3">Client-First</h4>
+          <p class="text-slate-500 text-sm leading-relaxed">We work as an extension of your team. We listen, plan, and deliver solutions tailored specifically for your business needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="flex-1">
+          <span class="text-primary font-bold uppercase text-xs tracking-widest">About Us</span>
+          <h2 class="text-4xl font-black mt-4 mb-6 leading-tight text-slate-900">We Build Reliable Digital Solutions for Modern Businesses</h2>
+          <p class="text-slate-600 mb-6 text-lg leading-relaxed">
+            JIYAN ENTERPRISE is a modern technology company dedicated to providing reliable and high-quality digital solutions. Our team combines thoughtful planning, modern technologies, and clean design practices to build digital products that are efficient, scalable, and built to solve real business challenges.
+          </p>
+          <ul class="space-y-4 mb-10">
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary bg-primary/10 rounded-full p-1">check</span>
+              <span class="font-medium text-slate-700">90+ Projects Successfully Delivered</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary bg-primary/10 rounded-full p-1">check</span>
+              <span class="font-medium text-slate-700">100% Client Satisfaction Rate</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary bg-primary/10 rounded-full p-1">check</span>
+              <span class="font-medium text-slate-700">End-to-End Project Management</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary bg-primary/10 rounded-full p-1">check</span>
+              <span class="font-medium text-slate-700">Based in Surat, Gujarat, India</span>
+            </li>
+          </ul>
+          <a href="about.html" class="inline-flex items-center gap-2 px-8 py-3 bg-slate-900 text-white font-bold rounded-xl hover:bg-primary transition-colors">
+            Learn More <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+        </div>
+        <div class="flex-1 relative">
+          <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10 p-8 border border-primary/10">
+            <img src="img/logo.png" alt="JIYAN ENTERPRISE" class="w-full max-w-sm mx-auto object-contain drop-shadow-2xl"/>
+          </div>
+          <div class="absolute -bottom-6 -right-6 w-40 h-40 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workflow -->
+  <section class="py-24 bg-background-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-primary font-bold tracking-widest uppercase text-xs">Our Process</span>
+        <h2 class="text-3xl font-black mt-3 mb-4 text-slate-900">How We Work</h2>
+        <p class="text-slate-500 max-w-xl mx-auto">A streamlined process from your idea to a live, production-ready digital product.</p>
+      </div>
+      <div class="relative grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary -z-10 mx-16"></div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center mb-6 border-4 border-white shadow-xl shadow-primary/20 z-10">
+            <span class="material-symbols-outlined">lightbulb</span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Discovery</h3>
+          <p class="text-slate-500 text-sm">We analyze your requirements and brainstorm the best approach for your project.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-secondary text-white flex items-center justify-center mb-6 border-4 border-white shadow-xl shadow-secondary/20 z-10">
+            <span class="material-symbols-outlined">draw</span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Design</h3>
+          <p class="text-slate-500 text-sm">Crafting intuitive UI/UX prototypes tailored to your users and business goals.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center mb-6 border-4 border-white shadow-xl shadow-primary/20 z-10">
+            <span class="material-symbols-outlined">code</span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Development</h3>
+          <p class="text-slate-500 text-sm">Our engineers build your product using modern, scalable, and tested tech stacks.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-secondary text-white flex items-center justify-center mb-6 border-4 border-white shadow-xl shadow-secondary/20 z-10">
+            <span class="material-symbols-outlined">rocket</span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Launch</h3>
+          <p class="text-slate-500 text-sm">Testing, deployment, and ongoing support to make your product a success.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="py-16 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-primary to-secondary p-10 md:p-16 text-center text-white">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-black mb-6">Ready to build your next digital product?</h2>
+          <p class="text-white/80 text-lg mb-10">Join 90+ businesses that have grown with JIYAN ENTERPRISE. Let's create something extraordinary together.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="contact.html" class="bg-white text-primary font-black px-10 py-4 rounded-xl shadow-lg hover:scale-105 transition-all">Get Started Today</a>
+            <a href="services.html" class="bg-primary/20 backdrop-blur border border-white/20 text-white font-black px-10 py-4 rounded-xl hover:bg-primary/30 transition-all">View Our Services</a>
+          </div>
+        </div>
+        <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-72 h-72 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-300 py-14">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center gap-3 mb-5">
+          <img src="img/logo.png" alt="JIYAN ENTERPRISE" class="h-9 w-9 object-contain rounded-lg"/>
+          <span class="text-lg font-black tracking-tight text-white uppercase">JIYAN ENTERPRISE</span>
+        </div>
+        <p class="text-sm leading-relaxed text-slate-400">Designing Digital Experiences That Matter. High-quality mobile apps and digital products for modern businesses.</p>
+        <div class="mt-5 space-y-2 text-sm text-slate-400">
+          <p class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">mail</span> jiyanenterprise734@gmail.com</p>
+          <p class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">call</span> +91 8799158303</p>
+          <p class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-base">location_on</span> GFL, 58, Krishna Row House, Pasodara, Kamrej, Surat – 395006, India</p>
+        </div>
+      </div>
+      <!-- Quick Links -->
+      <div>
+        <h5 class="text-white font-bold mb-6">Quick Links</h5>
+        <ul class="space-y-3 text-sm">
+          <li><a class="hover:text-primary transition-colors" href="index.html">Home</a></li>
+          <li><a class="hover:text-primary transition-colors" href="about.html">About Us</a></li>
+          <li><a class="hover:text-primary transition-colors" href="services.html">Services</a></li>
+          <li><a class="hover:text-primary transition-colors" href="contact.html">Contact Us</a></li>
+          <li><a class="hover:text-primary transition-colors" href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <!-- Services -->
+      <div>
+        <h5 class="text-white font-bold mb-6">Our Services</h5>
+        <ul class="space-y-3 text-sm">
+          <li><a class="hover:text-primary transition-colors" href="services.html">Android App Development</a></li>
+          <li><a class="hover:text-primary transition-colors" href="services.html">Website Development</a></li>
+          <li><a class="hover:text-primary transition-colors" href="services.html">UI/UX Design</a></li>
+          <li><a class="hover:text-primary transition-colors" href="services.html">App Publishing & Play Console</a></li>
+          <li><a class="hover:text-primary transition-colors" href="services.html">Maintenance & Support</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-800 pt-8 text-center text-xs text-slate-500">
+      <p>© 2025 JIYAN ENTERPRISE. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp Button -->
+<a class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl hover:scale-110 transition-transform active:scale-95 group" href="https://wa.me/918799158303" target="_blank" aria-label="Chat on WhatsApp">
+  <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </svg>
+  <span class="absolute right-full mr-4 whitespace-nowrap rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Chat on WhatsApp</span>
+</a>
+
+<script>
+  // Mobile menu toggle
+  const btn = document.getElementById('mobileMenuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+</script>
+</body>
+</html>
